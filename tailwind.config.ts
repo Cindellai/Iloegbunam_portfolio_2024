@@ -21,10 +21,24 @@ const config: Config = {
       },
     },
     extend: {
-      sans: 'var(--font-sans)',
-      serif: 'var(--font-serif)',
+      fontFamily: {
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'], // Correctly extending font family
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
+      },
+      animation: {
+        'ping-large': "ping-large 1s ease-in-out infinite",
+      },
+      keyframes: {
+        'ping-large': {
+          '75%, 100%': {
+            transform: 'scale(3)',
+            opacity: '0',
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [], // This should be outside the theme object
 };
+
 export default config;
