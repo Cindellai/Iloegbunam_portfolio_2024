@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import bookImage from "@/assets/images/book-cover.png";
+import songImage from "@/assets/images/song.jpeg";
 import { CardHeader } from "@/components/CardHeader";
 import Image from "next/image";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
@@ -102,13 +102,14 @@ export const AboutSection = () => {
         eyebrow="About Me"
         title="A Glimpse Into My World"
         description="Learn more about who I am, what I do, and what inspires me"
+        className="text-2xl md:text-3xl lg:text-3xl" 
       />
       <div className="mt-20 flex flex-col gap-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-        <Card className="h-[320px] md:col-span-2 lg:col-span-1">
-          <CardHeader title="My Reads" description="Take a look at my current faves" />
-          <div className="w-40 mx-auto mt-2 md:mt-0">
-            <Image src={bookImage} alt="Book cover" />
+        <Card className="h-[380px] md:col-span-2 lg:col-span-1">
+          <CardHeader title="Records 💽" description="Listen to my current fave" className="flex "/>
+          <div className="w-65 mx-auto mt-2 md:mt-0">
+            <Image src={songImage} alt="Song cover" />
           </div>
         </Card>
         
@@ -137,8 +138,10 @@ export const AboutSection = () => {
         <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <Image src={mapImage} alt="map" 
               className="h-full w-full object-cover object-left-top" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-170 rounded-full bg-gradient-to-r from-orange-300 to-pink-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gray-950/30">
-              <Image src={smileMemoji} alt="smiling" className="size-20" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-orange-300 to-pink-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 -z-20 animate-ping [animation-duration:2s]"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 -z-10"></div>"
+              <Image src={smileMemoji} alt="smiling" className="size-13 translate-x-.9 -translate-y-9" />
               </div>
         </Card>
       </div>
