@@ -12,7 +12,7 @@ import GithubIcon from "@/assets/icons/github.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png"
+import smileMemoji from "@/assets/images/me.png"
 import { ToolboxItems } from "@/components/ToolboxItems"; // or the correct path
 
 
@@ -130,7 +130,7 @@ export const AboutSection = () => {
           <CardHeader title="Beyond the Code" description="Explore my interests and hobbies outside the digital realm" className="px-6 py-6" />
           <div className="relative flex-1">
             {hobbies.map((hobby) => (
-              <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-pink-600 to-pink-300 rounded-full py-1.5 absolute" style={{ left: hobby.left, top: hobby.top, }}>
+              <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-purple-200 to-purple-300 rounded-full py-1.5 absolute" style={{ left: hobby.left, top: hobby.top, }}>
                 <span className="font-medium text-gray-950">{hobby.title}</span>
                 <span>{hobby.emoji}</span>
                 </div>
@@ -140,7 +140,7 @@ export const AboutSection = () => {
         <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <Image src={mapImage} alt="map" 
               className="h-full w-full object-cover object-left-top" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-orange-300 to-pink-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-170 rounded-full bg-gradient-to-r from-orange-300 to-pink-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:rounded-full after:outline-gray-950/30">
               <Image src={smileMemoji} alt="smiling" className="size-20" />
               </div>
         </Card>
