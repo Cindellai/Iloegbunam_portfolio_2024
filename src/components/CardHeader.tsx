@@ -1,4 +1,5 @@
 import StarIcon from "@/assets/icons/star.svg";
+import { twMerge } from "tailwind-merge";
 
 export const CardHeader = ({ title, description, className }: {
     title: string;
@@ -6,9 +7,8 @@ export const CardHeader = ({ title, description, className }: {
     className?: string;
 }) => {
     return (
-        <div className={`flex flex-col ${className}`}>
+        <div className={twMerge("flex flex-col p-6", className)}>
             <div className="inline-flex items-center gap-2">
-                {/* Ensure SVG styling is applied properly */}
                 <StarIcon width={24} height={24} fill="currentColor" className="text-pink-300" />
                 <h3 className="font-serif text-3xl">{title}</h3>
             </div>
