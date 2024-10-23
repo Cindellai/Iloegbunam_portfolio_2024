@@ -11,6 +11,10 @@ import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import { TechIcon } from "@/components/TechIcon";
+import mapImage from "@/assets/images/map.png";
+import smileMemoji from "@/assets/images/memoji-smile.png"
+import { ToolboxItems } from "@/components/ToolboxItems"; // or the correct path
+
 
 const toolboxItems = [
   {
@@ -18,11 +22,11 @@ const toolboxItems = [
     icon: JavaScriptIcon,
   },
   {
-    title: "HTML",
+    title: "HTML5",
     icon: HTMLIcon,
   },
   {
-    title: "CSS",
+    title: "CSS3",
     icon: CssIcon,
   },
   {
@@ -30,18 +34,56 @@ const toolboxItems = [
     icon: ReactIcon,
   },
   {
-    title: "Chrome DevTools",
+    title: "Chrome",
     icon: ChromeIcon,
   },
   {
-    title: "Git",
+    title: "Github",
     icon: GithubIcon,
   },
 ];
 
+const hobbies = [
+  {
+    title: "Reading",
+    emoji: '📖',
+  },
+  {
+    title: "Traveling",
+    emoji: '🗺️',
+    },
+  {
+    title: "Playing video games",
+    emoji: '🎮',
+  },
+  {
+    title: "Blender3D",
+    emoji: '🎨',
+    },
+  {
+    title: "Photography",
+    emoji: '📸',
+    },
+
+  {
+    title: "Weight-lifting",
+    emoji: '🏋️‍♂️',
+  },
+  {
+    title: "Music",
+    emoji: '🎵',
+    },
+
+  {
+    title: "Cooking",
+    emoji: '🍳',
+  }
+    ];
+
 export const AboutSection = () => {
   return (
-    <div className="pb-96">
+    <div className="py-20">
+      <div className="container">
       <SectionHeader
         eyebrow="About Me"
         title="A Glimpse Into My World"
@@ -54,22 +96,35 @@ export const AboutSection = () => {
             <Image src={bookImage} alt="Book cover" />
           </div>
         </Card>
+        
+      
         <Card>
+            <CardHeader
+              title="My Toolbox"
+              description="Explore the technologies and tools I use to craft digital experiences"
+            />
+            <ToolboxItems items={toolboxItems} />
+            <ToolboxItems items={toolboxItems} />
+          </Card>
+
+        <Card>
+            <CardHeader title="Beyond the Code" description="Explore my interests and hobbies outside the digital realm" />
           <div>
-            <StarIcon />
-            <h3> My Toolbox</h3>
-            <p> Explore the technologies and tools I use to craft digital experiences</p>
-          </div>
-          <div>
-            {toolboxItems.map((item) => (
-              <div key={item.title} className="flex items-center">
-                <TechIcon component={item.icon} />
-                <span className="ml-2">{item.title}</span>
-              </div>
+            {hobbies.map((hobby) => (
+              <div key={hobby.title}>
+                <span>{hobby.title}</span>
+                <span>{hobby.emoji}</span>
+                </div>
             ))}
           </div>
         </Card>
+        <Card>
+              <Image src={mapImage} alt="map" />
+              <Image src={smileMemoji} alt="smiling" />
+        </Card>
       </div>
     </div>
+    </div>
+
   );
 };
