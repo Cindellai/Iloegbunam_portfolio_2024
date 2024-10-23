@@ -47,36 +47,52 @@ const hobbies = [
   {
     title: "Reading",
     emoji: '📖',
+    left: '5%',
+    top: '5%',
   },
   {
     title: "Traveling",
     emoji: '🗺️',
+    left: '38%',
+    top: '5%',
     },
   {
     title: "Playing video games",
     emoji: '🎮',
+    left: '10%',
+    top: '35%',
   },
   {
     title: "Blender3D",
     emoji: '🎨',
+    left: '45%',
+    top: '40%',
     },
   {
     title: "Photography",
     emoji: '📸',
+    left: '70%',
+    top: '45%',
     },
 
   {
     title: "Weight-lifting",
     emoji: '🏋️‍♂️',
+    left: '5%',
+    top: '65%',
   },
   {
     title: "Music",
     emoji: '🎵',
+    left: '45%',
+    top: '70%',
     },
 
   {
     title: "Cooking",
     emoji: '🍳',
+    left: '70%',
+    top: '2%',
   }
     ];
 
@@ -89,7 +105,7 @@ export const AboutSection = () => {
         title="A Glimpse Into My World"
         description="Learn more about who I am, what I do, and what inspires me"
       />
-      <div className="mt-20">
+      <div className="mt-20 flex flex-col gap-8">
         <Card className="h-[320px]">
           <CardHeader title="My Reads" description="Take a look at my current faves" />
           <div className="w-40 mx-auto mt-8">
@@ -103,16 +119,17 @@ export const AboutSection = () => {
               title="My Toolbox"
               description="Explore the technologies and tools I use to craft digital experiences"
             />
-            <ToolboxItems items={toolboxItems} />
-            <ToolboxItems items={toolboxItems} />
+            <ToolboxItems items={toolboxItems} className="mt-6" />
+            <ToolboxItems items={toolboxItems} className="mt-6 " 
+            itemsWrapperClassName="-translate-x-1/2" />
           </Card>
 
-        <Card>
-            <CardHeader title="Beyond the Code" description="Explore my interests and hobbies outside the digital realm" />
-          <div>
+        <Card className="h-[320px] p-0 flex flex-col">
+          <CardHeader title="Beyond the Code" description="Explore my interests and hobbies outside the digital realm" className="px-6 py-6" />
+          <div className="relative flex-1">
             {hobbies.map((hobby) => (
-              <div key={hobby.title}>
-                <span>{hobby.title}</span>
+              <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-pink-400 to-orange-300 rounded-full py-1.5 absolute" style={{ left: hobby.left, top: hobby.top, }}>
+                <span className="font-medium text-gray-950">{hobby.title}</span>
                 <span>{hobby.emoji}</span>
                 </div>
             ))}
