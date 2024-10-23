@@ -78,7 +78,7 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, projectIndex) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              className="px-4 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
               style={{
                 top: `calc(64px + ${projectIndex * 20}px)`, // Corrected this line
               }}>
@@ -89,7 +89,7 @@ export const ProjectsSection = () => {
                   <span> &bull; </span>
                   <span>{project.year}</span>
                 </div>
-                <h3 className="font-serif font-semibold text-2xl mt-2 md:mt-5 md:text-4xl">{project.title}</h3>
+                <h3 className="font-serif  text-2xl mt-2 md:mt-5 md:text-4xl">{project.title}</h3>
                 <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                 <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                   {project.results.map((result, index) => (
@@ -100,7 +100,7 @@ export const ProjectsSection = () => {
                   ))}
                 </ul>
                 <a href={project.link}>
-                  <button className="bg-white text-gray-950 h-12 px-6 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                  <button className="bg-white text-gray-950 h-12 px-6 w-full md:w-auto rounded-xl inline-flex items-center justify-center gap-2 mt-8">
                     <span>Visit Repo</span>
                     <ArrowUpRightIcon className="size-4" />
                   </button>

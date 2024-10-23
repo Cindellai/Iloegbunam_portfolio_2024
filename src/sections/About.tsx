@@ -120,7 +120,7 @@ export const AboutSection = () => {
               title="My Toolbox"
               description="Explore the technologies and tools I use to craft digital experiences"
             />
-            <ToolboxItems items={toolboxItems} className="mt-6" />
+            <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-left [animation-duration:30s]" />
             <ToolboxItems items={toolboxItems} className="mt-6" 
             itemsWrapperClassName="-translate-x-1/2" />
           </Card>
