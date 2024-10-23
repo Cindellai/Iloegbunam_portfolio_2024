@@ -22,11 +22,12 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'], // Correctly extending font family
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-serif)', 'Georgia', 'serif'],
       },
       animation: {
         'ping-large': "ping-large 1s ease-in-out infinite",
+        'move-left': 'move-left 30s linear infinite', // Adjusted duration for smooth scrolling
       },
       keyframes: {
         'ping-large': {
@@ -35,10 +36,18 @@ const config: Config = {
             opacity: '0',
           },
         },
+        'move-left': {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-50%)',
+          },
+        },
       },
     },
   },
-  plugins: [], // This should be outside the theme object
+  plugins: [], // Correctly outside the theme object
 };
 
 export default config;
