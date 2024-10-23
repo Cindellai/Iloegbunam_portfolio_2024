@@ -1,6 +1,5 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import StarIcon from "@/assets/icons/star.svg";
 import bookImage from "@/assets/images/book-cover.png";
 import { CardHeader } from "@/components/CardHeader";
 import Image from "next/image";
@@ -10,7 +9,6 @@ import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
-import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/me.png"
 import { ToolboxItems } from "@/components/ToolboxItems"; // or the correct path
@@ -121,8 +119,7 @@ export const AboutSection = () => {
               description="Explore the technologies and tools I use to craft digital experiences"
             />
             <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-left [animation-duration:30s]" />
-            <ToolboxItems items={toolboxItems} className="mt-6" 
-            itemsWrapperClassName="-translate-x-1/2" />
+            <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-right [animation-duration:20s]" />
           </Card>
           </div>
       <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
