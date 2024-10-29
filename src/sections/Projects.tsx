@@ -1,5 +1,5 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import fairTrade from "@/assets/images/fair.png";
+import repairMate from "@/assets/images/repair.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from 'next/image';
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -17,11 +17,11 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://github.com/Cindellai/FairTrade",
+    image: fairTrade,
   },
   {
-    company: "Northwestern Security & AI Lab",
+    company: "Northwestern University Product Management Team",
     year: "March 2024 - June 2024",
     title: "RepairMate",
     results: [
@@ -29,8 +29,8 @@ const portfolioProjects = [
       { title: "Enabled OBD device interfacing for repair recommendations" },
       { title: "Conducted end-to-end testing to ensure application robustness" },
     ],
-    link: "https://youtu.be/YOUR_REPAIRMATE_LINK", // Replace with the actual link
-    image: darkSaasLandingPage, // Replace with the actual image variable
+    link: "https://github.com/394-w24/obd-app", // Replace with the actual link
+    image: repairMate, // Replace with the actual image variable
   },
   {
     company: "PIMCO",
@@ -42,7 +42,7 @@ const portfolioProjects = [
       { title: "Enhanced system integration for stakeholders" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    image: repairMate,
   },
   {
     company: "PIMCO",
