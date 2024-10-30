@@ -29,21 +29,20 @@ export const HeroSection = () => {
           </HeroOrbit>
           <HeroOrbit size={940} rotation={4} shouldOrbit orbitDuration="15s" shouldSpin spinDuration="2s">
             <SparkleIcon className="size-8 text-pink-300" />
-            </HeroOrbit>
-          <HeroOrbit size={640} rotation={4} shouldOrbit orbitDuration="15s" >
+          </HeroOrbit>
+          <HeroOrbit size={640} rotation={4} shouldOrbit orbitDuration="15s">
             <SparkleIcon className="size-8 text-pink-900" />
-            </HeroOrbit> 
-          
-            <HeroOrbit size={840} rotation={9} shouldOrbit orbitDuration="40s" >
+          </HeroOrbit> 
+          <HeroOrbit size={840} rotation={9} shouldOrbit orbitDuration="40s">
             <SparkleIcon className="size-8 text-pink-200/10" />
-            </HeroOrbit> 
+          </HeroOrbit> 
           <HeroOrbit size={890} rotation={-100} shouldOrbit orbitDuration="20s">
             <HeartIcon className="size-6 text-pink-300" />
           </HeroOrbit>
           <HeroOrbit size={440} rotation={4} shouldOrbit orbitDuration="10s" shouldSpin spinDuration="5s">
             <SparkleIcon className="size-8 text-pink-700" />
           </HeroOrbit>
-          <HeroOrbit size={500} rotation={80} shouldOrbit orbitDuration="32s" >
+          <HeroOrbit size={500} rotation={80} shouldOrbit orbitDuration="32s">
             <HeartIcon className="size-10 text-pink-600" />
           </HeroOrbit>
           <HeroOrbit size={620} rotation={160} shouldOrbit orbitDuration="20s" shouldSpin spinDuration="4.5s">
@@ -83,7 +82,7 @@ export const HeroSection = () => {
           </button>
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
             <span>👋</span>
-            <span className="font-semibold">Let's Connect</span>
+            <span className="font-semibold">Let&apos;s Connect</span> {/* Changed to escape the single quote */}
           </button>
         </div>
       </div>
