@@ -1,6 +1,7 @@
-import fairTrade from "@/assets/images/fair.png";
-import repairMate from "@/assets/images/repair.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import fairTrade from "@/assets/images/l.png";
+import repairMate from "@/assets/images/q.png";
+import a from "@/assets/images/man.png";
+import b from "@/assets/images/sry.png";
 import Image from 'next/image';
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -8,18 +9,20 @@ import grainImage from "@/assets/images/grain.jpg";
 import { Card } from "@/components/Card";
 
 const portfolioProjects = [
+
   {
     company: "Discovery Partners Institute",
-    year: "Summer 2024",
+    year: "June 2024 - August 2024",
     title: "FairTrade",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Developed a diagnostic tool for vehicles using React and JavaScript" },
+      { title: "Enabled OBD device interfacing for repair recommendations" },
+      { title: "Conducted end-to-end testing to ensure application robustness" },
     ],
-    link: "https://github.com/Cindellai/FairTrade",
-    image: fairTrade,
+    link: "https://github.com/394-w24/obd-app", // Replace with the actual link
+    image: fairTrade, // Replace with the actual image variable
   },
+
   {
     company: "Northwestern University Product Management Team",
     year: "March 2024 - June 2024",
@@ -41,8 +44,8 @@ const portfolioProjects = [
       { title: "Improved client onboarding and report generation" },
       { title: "Enhanced system integration for stakeholders" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: repairMate,
+    link: "#",
+    image: b,
   },
   {
     company: "PIMCO",
@@ -53,9 +56,10 @@ const portfolioProjects = [
       { title: "Improved diagnostic capabilities for helpdesk team" },
       { title: "Enhanced cross-platform compatibility" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "#",
+    image: b,
   },
+  
 ];
 
 export const ProjectsSection = () => {
@@ -108,7 +112,7 @@ export const ProjectsSection = () => {
               </div>
 
                 <div className="relative"> 
-                  <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" />
+                  <Image src={project.image} alt={project.title} className="mt-12 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-[800px]" />
                 </div>
               </div>
             </Card>
